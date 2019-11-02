@@ -1,0 +1,45 @@
+.demo-dot {
+  position: relative;
+  top: 10%;
+  left: 0%;
+  /* transform: translate(0, 0); */
+  animation: xAxis 5s infinite ease-in;
+  /* display: flex;
+  width: 500px;
+  height: auto; */
+}
+
+.demo-dot::after {
+  position: relative;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: aquamarine;
+  animation: yAxis 2.5s infinite ease-out;
+}
+
+@keyframes yAxis {
+  0% {
+    right: 20%;
+    /* transform: translate(100px, 100px); */
+  }
+  50% {
+    top: 30%;
+    animation-timing-function: ease-in;
+    transform: translateY(300px);
+  }
+}
+
+@keyframes xAxis {
+  0% {
+    left: 20%;
+    /* transform: translate(100px, 100px); */
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: translateX(500px);
+  }
+}

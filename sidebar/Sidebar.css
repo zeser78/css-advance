@@ -1,0 +1,9 @@
+sidebar-l > * {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: azure;
+}
+
+sidebar-l > * > * {
+  flex-grow: 1;
+}
